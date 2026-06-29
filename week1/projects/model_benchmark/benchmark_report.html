@@ -28,36 +28,36 @@
 </head>
 <body>
     <h1>🤖 CalderR Model Benchmark Report</h1>
-    <p class="meta">Generated: 2026-06-29 15:26 | Models: 4 | Tasks: 8</p>
+    <p class="meta">Generated: 2026-06-29 15:58 | Models: 4 | Tasks: 8</p>
 
     <h2>📊 Model Summary</h2>
     <div class="cards">
         <div class="card">
-            <h3>mixtral-8x7b-32768</h3>
-            <div class="metric"><span>Avg Latency</span><strong>0ms</strong></div>
-            <div class="metric"><span>Accuracy</span><strong>0%</strong></div>
-            <div class="metric"><span>Total Tokens</span><strong>0</strong></div>
-            <div class="metric"><span>Errors</span><strong>100%</strong></div>
-        </div>
-        <div class="card">
-            <h3>gemma2-9b-it</h3>
-            <div class="metric"><span>Avg Latency</span><strong>0ms</strong></div>
-            <div class="metric"><span>Accuracy</span><strong>0%</strong></div>
-            <div class="metric"><span>Total Tokens</span><strong>0</strong></div>
-            <div class="metric"><span>Errors</span><strong>100%</strong></div>
-        </div>
-        <div class="card">
-            <h3>llama-3.3-70b-versatile</h3>
-            <div class="metric"><span>Avg Latency</span><strong>368ms</strong></div>
+            <h3>llama-3.1-8b-instant</h3>
+            <div class="metric"><span>Avg Latency</span><strong>474ms</strong></div>
             <div class="metric"><span>Accuracy</span><strong>96%</strong></div>
-            <div class="metric"><span>Total Tokens</span><strong>1,133</strong></div>
+            <div class="metric"><span>Total Tokens</span><strong>1,433</strong></div>
             <div class="metric"><span>Errors</span><strong>0%</strong></div>
         </div>
         <div class="card">
-            <h3>llama-3.1-8b-instant</h3>
-            <div class="metric"><span>Avg Latency</span><strong>530ms</strong></div>
+            <h3>llama-3.3-70b-versatile</h3>
+            <div class="metric"><span>Avg Latency</span><strong>606ms</strong></div>
             <div class="metric"><span>Accuracy</span><strong>96%</strong></div>
-            <div class="metric"><span>Total Tokens</span><strong>1,361</strong></div>
+            <div class="metric"><span>Total Tokens</span><strong>1,145</strong></div>
+            <div class="metric"><span>Errors</span><strong>0%</strong></div>
+        </div>
+        <div class="card">
+            <h3>openai/gpt-oss-20b</h3>
+            <div class="metric"><span>Avg Latency</span><strong>696ms</strong></div>
+            <div class="metric"><span>Accuracy</span><strong>96%</strong></div>
+            <div class="metric"><span>Total Tokens</span><strong>2,524</strong></div>
+            <div class="metric"><span>Errors</span><strong>0%</strong></div>
+        </div>
+        <div class="card">
+            <h3>meta-llama/llama-4-scout-17b-16e-instruct</h3>
+            <div class="metric"><span>Avg Latency</span><strong>790ms</strong></div>
+            <div class="metric"><span>Accuracy</span><strong>100%</strong></div>
+            <div class="metric"><span>Total Tokens</span><strong>1,508</strong></div>
             <div class="metric"><span>Errors</span><strong>0%</strong></div>
         </div></div>
 
@@ -80,21 +80,22 @@
                 <td>llama</td>
                 <td>reasoning_easy</td>
                 <td><span class="badge reasoning">reasoning</span></td>
-                <td>1140ms</td>
+                <td>736ms</td>
                 <td>100%</td>
-                <td>112</td>
+                <td>103</td>
                 <td>✅</td>
-                <td class="response">To find the speed, divide the distance traveled (120km) by the time taken (2 hours). 
+                <td class="response">To find the speed, divide the distance by the time. 
 
-Speed = Dista...</td>
+Speed = Distance / Time
+Speed = 120 km / 2 hou...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>reasoning_hard</td>
                 <td><span class="badge reasoning">reasoning</span></td>
-                <td>956ms</td>
+                <td>862ms</td>
                 <td>100%</td>
-                <td>123</td>
+                <td>198</td>
                 <td>✅</td>
                 <td class="response">To find the number of sheep left, we need to subtract the number of sheep that died from the total n...</td>
             </tr>
@@ -102,103 +103,102 @@ Speed = Dista...</td>
                 <td>llama</td>
                 <td>coding_easy</td>
                 <td><span class="badge coding">coding</span></td>
-                <td>964ms</td>
+                <td>837ms</td>
                 <td>67%</td>
-                <td>185</td>
+                <td>202</td>
                 <td>✅</td>
                 <td class="response">```python
-def reverse_string(input_str: str) -> str:
+def reverse_string(s: str) -> str:
     """
     Reverses a given string.
 
-    Args:...</td>
+    Args:
+       ...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>coding_hard</td>
                 <td><span class="badge coding">coding</span></td>
-                <td>447ms</td>
+                <td>466ms</td>
                 <td>100%</td>
-                <td>426</td>
+                <td>414</td>
                 <td>✅</td>
-                <td class="response">**Sieve of Eratosthenes Function**
-=====================================
-
-```python
-def sieve_of_era...</td>
+                <td class="response">**Sieve of Eratosthenes Implementation in Python**
+=================================================...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>creative_easy</td>
                 <td><span class="badge creative">creative</span></td>
-                <td>153ms</td>
+                <td>129ms</td>
                 <td>100%</td>
-                <td>70</td>
+                <td>71</td>
                 <td>✅</td>
-                <td class="response">Metal minds arise
-Learning from our human ways
-Future's coded soul</td>
+                <td class="response">Metal minds awake
+Learning, growing, thinking fast
+Future in their code</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>factual_easy</td>
                 <td><span class="badge factual">factual</span></td>
-                <td>134ms</td>
+                <td>350ms</td>
                 <td>100%</td>
-                <td>87</td>
+                <td>115</td>
                 <td>✅</td>
-                <td class="response">The Transformer architecture was introduced in 2017 by Vaswani et al. in their paper "Attention is A...</td>
+                <td class="response">The Transformer architecture was introduced in 2017. The paper that introduced it is titled "Attenti...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>factual_hard</td>
                 <td><span class="badge factual">factual</span></td>
-                <td>273ms</td>
+                <td>226ms</td>
                 <td>100%</td>
-                <td>177</td>
+                <td>152</td>
                 <td>✅</td>
-                <td class="response">RLHF (Reinforcement Learning from Human Feedback) is a machine learning technique where AI models ar...</td>
+                <td class="response">RLHF (Reward Learning from Human Feedback) and Constitutional AI are two distinct approaches to deve...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>summarization</td>
                 <td><span class="badge summarization">summarization</span></td>
-                <td>173ms</td>
+                <td>185ms</td>
                 <td>100%</td>
-                <td>181</td>
+                <td>178</td>
                 <td>✅</td>
-                <td class="response">The Internet of Things (IoT) is a network of physical devices with sensors, software, and connectivi...</td>
+                <td class="response">The Internet of Things (IoT) is a network of physical devices embedded with sensors, software, and c...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>reasoning_easy</td>
                 <td><span class="badge reasoning">reasoning</span></td>
-                <td>149ms</td>
+                <td>600ms</td>
                 <td>100%</td>
-                <td>93</td>
+                <td>104</td>
                 <td>✅</td>
                 <td class="response">To find the speed, divide the distance by the time: 
-120 km / 2 hours = 60 km/h.</td>
+Speed = Distance / Time 
+Speed = 120 km / 2 hou...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>reasoning_hard</td>
                 <td><span class="badge reasoning">reasoning</span></td>
-                <td>192ms</td>
+                <td>616ms</td>
                 <td>100%</td>
                 <td>106</td>
                 <td>✅</td>
-                <td class="response">The farmer has 17 sheep initially. "All but 9 die" means that 9 sheep are left alive. 
+                <td class="response">The farmer starts with 17 sheep. "All but 9 die" means that 9 sheep are left alive. 
 
-So, the numb...</td>
+So, the number...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>coding_easy</td>
                 <td><span class="badge coding">coding</span></td>
-                <td>565ms</td>
+                <td>539ms</td>
                 <td>67%</td>
-                <td>145</td>
+                <td>137</td>
                 <td>✅</td>
                 <td class="response">```python
 def reverse_string(s: str) -> str:
@@ -212,9 +212,9 @@ def reverse_string(s: str) -> str:
                 <td>llama</td>
                 <td>coding_hard</td>
                 <td><span class="badge coding">coding</span></td>
-                <td>737ms</td>
+                <td>724ms</td>
                 <td>100%</td>
-                <td>273</td>
+                <td>269</td>
                 <td>✅</td>
                 <td class="response">```python
 def sieve_of_eratosthenes(n):
@@ -225,19 +225,19 @@ def sieve_of_eratosthenes(n):
                 <td>llama</td>
                 <td>creative_easy</td>
                 <td><span class="badge creative">creative</span></td>
-                <td>141ms</td>
+                <td>412ms</td>
                 <td>100%</td>
                 <td>72</td>
                 <td>✅</td>
                 <td class="response">Metal mind awakes
-Learning, growing, thinking deep
-Future's gentle grasp</td>
+Learning, growing, thinking fast
+Future's gentle hand</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>factual_easy</td>
                 <td><span class="badge factual">factual</span></td>
-                <td>135ms</td>
+                <td>405ms</td>
                 <td>100%</td>
                 <td>87</td>
                 <td>✅</td>
@@ -247,181 +247,214 @@ Future's gentle grasp</td>
                 <td>llama</td>
                 <td>factual_hard</td>
                 <td><span class="badge factual">factual</span></td>
-                <td>507ms</td>
+                <td>847ms</td>
                 <td>100%</td>
-                <td>167</td>
+                <td>178</td>
                 <td>✅</td>
-                <td class="response">RLHF (Reinforcement Learning from Human Feedback) is a training method that fine-tunes AI models usi...</td>
+                <td class="response">RLHF (Reinforcement Learning from Human Feedback) is a training method that uses human feedback to f...</td>
             </tr>
             <tr>
                 <td>llama</td>
                 <td>summarization</td>
                 <td><span class="badge summarization">summarization</span></td>
-                <td>521ms</td>
+                <td>708ms</td>
                 <td>100%</td>
-                <td>190</td>
+                <td>192</td>
                 <td>✅</td>
                 <td class="response">The Internet of Things (IoT) is a network of physical devices with sensors, software, and connectivi...</td>
             </tr>
             <tr>
-                <td>mixtral</td>
+                <td>meta</td>
                 <td>reasoning_easy</td>
                 <td><span class="badge reasoning">reasoning</span></td>
-                <td>74ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>398ms</td>
+                <td>100%</td>
+                <td>149</td>
+                <td>✅</td>
+                <td class="response">## Step 1: Understand the given information
+The train travels a distance of 120km in 2 hours.
+
+## St...</td>
             </tr>
             <tr>
-                <td>mixtral</td>
+                <td>meta</td>
                 <td>reasoning_hard</td>
                 <td><span class="badge reasoning">reasoning</span></td>
-                <td>73ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>1017ms</td>
+                <td>100%</td>
+                <td>160</td>
+                <td>✅</td>
+                <td class="response">To solve this, let's break down the information given:
+
+1. The farmer starts with 17 sheep.
+2. The p...</td>
             </tr>
             <tr>
-                <td>mixtral</td>
+                <td>meta</td>
                 <td>coding_easy</td>
                 <td><span class="badge coding">coding</span></td>
-                <td>71ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>1118ms</td>
+                <td>100%</td>
+                <td>225</td>
+                <td>✅</td>
+                <td class="response">**String Reversal Function**
+==========================
+
+### Code
+
+```python
+def reverse_string(inpu...</td>
             </tr>
             <tr>
-                <td>mixtral</td>
+                <td>meta</td>
                 <td>coding_hard</td>
                 <td><span class="badge coding">coding</span></td>
-                <td>63ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>2233ms</td>
+                <td>100%</td>
+                <td>454</td>
+                <td>✅</td>
+                <td class="response">### Sieve of Eratosthenes Implementation in Python
+#### Function Description
+
+The following Python f...</td>
             </tr>
             <tr>
-                <td>mixtral</td>
+                <td>meta</td>
                 <td>creative_easy</td>
                 <td><span class="badge creative">creative</span></td>
-                <td>75ms</td>
+                <td>409ms</td>
                 <td>100%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>52</td>
+                <td>✅</td>
+                <td class="response">Machines think for us
+Intelligence born of code
+Future's silent mind</td>
             </tr>
             <tr>
-                <td>mixtral</td>
+                <td>meta</td>
                 <td>factual_easy</td>
                 <td><span class="badge factual">factual</span></td>
-                <td>67ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>505ms</td>
+                <td>100%</td>
+                <td>157</td>
+                <td>✅</td>
+                <td class="response">The Transformer architecture was introduced in 2017 by Vaswani et al. in the paper titled "Attention...</td>
             </tr>
             <tr>
-                <td>mixtral</td>
+                <td>meta</td>
                 <td>factual_hard</td>
                 <td><span class="badge factual">factual</span></td>
-                <td>65ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>322ms</td>
+                <td>100%</td>
+                <td>128</td>
+                <td>✅</td>
+                <td class="response">RLHF (Reinforcement Learning from Human Feedback) and Constitutional AI are two approaches to aligni...</td>
             </tr>
             <tr>
-                <td>mixtral</td>
+                <td>meta</td>
                 <td>summarization</td>
                 <td><span class="badge summarization">summarization</span></td>
-                <td>70ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>319ms</td>
+                <td>100%</td>
+                <td>183</td>
+                <td>✅</td>
+                <td class="response">Here is a 2-sentence summary:
+
+The Internet of Things (IoT) is a network of physical devices equippe...</td>
             </tr>
             <tr>
-                <td>gemma2</td>
+                <td>openai/gpt</td>
                 <td>reasoning_easy</td>
                 <td><span class="badge reasoning">reasoning</span></td>
-                <td>73ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>613ms</td>
+                <td>100%</td>
+                <td>221</td>
+                <td>✅</td>
+                <td class="response">The speed is  
+\[
+\text{speed} = \frac{\text{distance}}{\text{time}} = \frac{120\ \text{km}}{2\ \tex...</td>
             </tr>
             <tr>
-                <td>gemma2</td>
+                <td>openai/gpt</td>
                 <td>reasoning_hard</td>
                 <td><span class="badge reasoning">reasoning</span></td>
-                <td>68ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>525ms</td>
+                <td>100%</td>
+                <td>288</td>
+                <td>✅</td>
+                <td class="response">There are **9 sheep left**.
+
+**Reasoning:**  
+- The farmer originally has 17 sheep.  
+- The phrase “...</td>
             </tr>
             <tr>
-                <td>gemma2</td>
+                <td>openai/gpt</td>
                 <td>coding_easy</td>
                 <td><span class="badge coding">coding</span></td>
-                <td>70ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>491ms</td>
+                <td>67%</td>
+                <td>245</td>
+                <td>✅</td>
+                <td class="response">```python
+def reverse_string(s: str) -> str:
+    """
+    Return a new string that is the reverse of ...</td>
             </tr>
             <tr>
-                <td>gemma2</td>
+                <td>openai/gpt</td>
                 <td>coding_hard</td>
                 <td><span class="badge coding">coding</span></td>
-                <td>84ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>902ms</td>
+                <td>100%</td>
+                <td>514</td>
+                <td>✅</td>
+                <td class="response">```python
+def sieve_of_eratosthenes(n: int) -> list[int]:
+    """
+    Return a list of all prime num...</td>
             </tr>
             <tr>
-                <td>gemma2</td>
+                <td>openai/gpt</td>
                 <td>creative_easy</td>
                 <td><span class="badge creative">creative</span></td>
-                <td>75ms</td>
+                <td>1068ms</td>
                 <td>100%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>483</td>
+                <td>✅</td>
+                <td class="response">Silent circuits hum,  
+Minds of code reach for bright stars,  
+Dawn of thought reborn.</td>
             </tr>
             <tr>
-                <td>gemma2</td>
+                <td>openai/gpt</td>
                 <td>factual_easy</td>
                 <td><span class="badge factual">factual</span></td>
-                <td>74ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>557ms</td>
+                <td>100%</td>
+                <td>171</td>
+                <td>✅</td>
+                <td class="response">The Transformer architecture was introduced in **2017** by the paper **“Attention Is All You Need”**...</td>
             </tr>
             <tr>
-                <td>gemma2</td>
+                <td>openai/gpt</td>
                 <td>factual_hard</td>
                 <td><span class="badge factual">factual</span></td>
-                <td>75ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>949ms</td>
+                <td>100%</td>
+                <td>336</td>
+                <td>✅</td>
+                <td class="response">Reinforcement Learning from Human Feedback (RLHF) fine‑tunes a model by training it to maximize a re...</td>
             </tr>
             <tr>
-                <td>gemma2</td>
+                <td>openai/gpt</td>
                 <td>summarization</td>
                 <td><span class="badge summarization">summarization</span></td>
-                <td>72ms</td>
-                <td>0%</td>
-                <td>0</td>
-                <td>❌</td>
-                <td class="response"></td>
+                <td>467ms</td>
+                <td>100%</td>
+                <td>266</td>
+                <td>✅</td>
+                <td class="response">The Internet of Things (IoT) is a network of physical devices equipped with sensors, software, and c...</td>
             </tr></tbody>
     </table>
 </body>
