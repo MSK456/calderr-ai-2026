@@ -1,0 +1,52 @@
+# Task Suite for Multi-Model Benchmarking
+benchmark_name: "CalderR Week 1 Benchmark"
+version: "1.0"
+
+tasks:
+  - id: "reasoning_easy"
+    category: "reasoning"
+    difficulty: "easy"
+    prompt: "If a train travels 120km in 2 hours, what is its speed in km/h?"
+    expected_keywords: ["60", "km/h"]
+
+  - id: "reasoning_hard"
+    category: "reasoning"
+    difficulty: "hard"
+    prompt: "A farmer has 17 sheep. All but 9 die. How many are left? Explain your reasoning."
+    expected_keywords: ["9"]
+
+  - id: "coding_easy"
+    category: "coding"
+    difficulty: "easy"
+    prompt: "Write a Python function that reverses a string. Include a docstring."
+    expected_keywords: ["def", "return", "docstring"]
+
+  - id: "coding_hard"
+    category: "coding"
+    difficulty: "hard"
+    prompt: "Write a Python function that finds all prime numbers up to n using the Sieve of Eratosthenes. Include time complexity comment."
+    expected_keywords: ["def", "sieve", "prime", "O("]
+
+  - id: "creative_easy"
+    category: "creative"
+    difficulty: "easy"
+    prompt: "Write a haiku about artificial intelligence."
+    expected_keywords: []
+
+  - id: "factual_easy"
+    category: "factual"
+    difficulty: "easy"
+    prompt: "What year was the transformer architecture introduced and what paper introduced it?"
+    expected_keywords: ["2017", "attention"]
+
+  - id: "factual_hard"
+    category: "factual"
+    difficulty: "hard"
+    prompt: "Explain the difference between RLHF and Constitutional AI in 3 sentences."
+    expected_keywords: ["human", "feedback", "constitutional"]
+
+  - id: "summarization"
+    category: "summarization"
+    difficulty: "medium"
+    prompt: "Summarize in 2 sentences: The Internet of Things (IoT) refers to the network of physical devices embedded with sensors, software, and connectivity. These devices collect and exchange data, enabling smart homes, industrial automation, and healthcare monitoring. The global IoT market is expected to reach $1 trillion by 2030, with over 75 billion connected devices."
+    expected_keywords: ["iot", "devices", "data"]

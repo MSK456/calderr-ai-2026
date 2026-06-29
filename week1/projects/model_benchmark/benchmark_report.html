@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalderR Model Benchmark Report</title>
+    <style>
+        body { font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; padding: 20px; background: #0d1117; color: #c9d1d9; }
+        h1 { color: #58a6ff; text-align: center; }
+        h2 { color: #79c0ff; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
+        .meta { text-align: center; color: #8b949e; margin-bottom: 30px; }
+        .cards { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 30px; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; flex: 1; min-width: 200px; }
+        .card h3 { color: #f0f6fc; margin: 0 0 12px; font-size: 14px; }
+        .metric { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #21262d; font-size: 13px; }
+        table { width: 100%; border-collapse: collapse; background: #161b22; border-radius: 8px; overflow: hidden; }
+        th { background: #21262d; padding: 10px 12px; text-align: left; color: #79c0ff; font-size: 13px; }
+        td { padding: 8px 12px; border-bottom: 1px solid #21262d; font-size: 12px; }
+        tr:hover { background: #1c2128; }
+        .badge { padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; }
+        .reasoning { background: #1f6feb33; color: #79c0ff; }
+        .coding { background: #238636; color: #3fb950; }
+        .creative { background: #6e40c933; color: #d2a8ff; }
+        .factual { background: #b08800; color: #f0c000; }
+        .summarization { background: #cf222e33; color: #f85149; }
+        .response { max-width: 300px; font-size: 11px; color: #8b949e; }
+    </style>
+</head>
+<body>
+    <h1>🤖 CalderR Model Benchmark Report</h1>
+    <p class="meta">Generated: 2026-06-29 15:26 | Models: 4 | Tasks: 8</p>
+
+    <h2>📊 Model Summary</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>mixtral-8x7b-32768</h3>
+            <div class="metric"><span>Avg Latency</span><strong>0ms</strong></div>
+            <div class="metric"><span>Accuracy</span><strong>0%</strong></div>
+            <div class="metric"><span>Total Tokens</span><strong>0</strong></div>
+            <div class="metric"><span>Errors</span><strong>100%</strong></div>
+        </div>
+        <div class="card">
+            <h3>gemma2-9b-it</h3>
+            <div class="metric"><span>Avg Latency</span><strong>0ms</strong></div>
+            <div class="metric"><span>Accuracy</span><strong>0%</strong></div>
+            <div class="metric"><span>Total Tokens</span><strong>0</strong></div>
+            <div class="metric"><span>Errors</span><strong>100%</strong></div>
+        </div>
+        <div class="card">
+            <h3>llama-3.3-70b-versatile</h3>
+            <div class="metric"><span>Avg Latency</span><strong>368ms</strong></div>
+            <div class="metric"><span>Accuracy</span><strong>96%</strong></div>
+            <div class="metric"><span>Total Tokens</span><strong>1,133</strong></div>
+            <div class="metric"><span>Errors</span><strong>0%</strong></div>
+        </div>
+        <div class="card">
+            <h3>llama-3.1-8b-instant</h3>
+            <div class="metric"><span>Avg Latency</span><strong>530ms</strong></div>
+            <div class="metric"><span>Accuracy</span><strong>96%</strong></div>
+            <div class="metric"><span>Total Tokens</span><strong>1,361</strong></div>
+            <div class="metric"><span>Errors</span><strong>0%</strong></div>
+        </div></div>
+
+    <h2>📋 Detailed Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Task</th>
+                <th>Category</th>
+                <th>Latency</th>
+                <th>Accuracy</th>
+                <th>Tokens</th>
+                <th>Status</th>
+                <th>Response Preview</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>llama</td>
+                <td>reasoning_easy</td>
+                <td><span class="badge reasoning">reasoning</span></td>
+                <td>1140ms</td>
+                <td>100%</td>
+                <td>112</td>
+                <td>✅</td>
+                <td class="response">To find the speed, divide the distance traveled (120km) by the time taken (2 hours). 
+
+Speed = Dista...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>reasoning_hard</td>
+                <td><span class="badge reasoning">reasoning</span></td>
+                <td>956ms</td>
+                <td>100%</td>
+                <td>123</td>
+                <td>✅</td>
+                <td class="response">To find the number of sheep left, we need to subtract the number of sheep that died from the total n...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>coding_easy</td>
+                <td><span class="badge coding">coding</span></td>
+                <td>964ms</td>
+                <td>67%</td>
+                <td>185</td>
+                <td>✅</td>
+                <td class="response">```python
+def reverse_string(input_str: str) -> str:
+    """
+    Reverses a given string.
+
+    Args:...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>coding_hard</td>
+                <td><span class="badge coding">coding</span></td>
+                <td>447ms</td>
+                <td>100%</td>
+                <td>426</td>
+                <td>✅</td>
+                <td class="response">**Sieve of Eratosthenes Function**
+=====================================
+
+```python
+def sieve_of_era...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>creative_easy</td>
+                <td><span class="badge creative">creative</span></td>
+                <td>153ms</td>
+                <td>100%</td>
+                <td>70</td>
+                <td>✅</td>
+                <td class="response">Metal minds arise
+Learning from our human ways
+Future's coded soul</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>factual_easy</td>
+                <td><span class="badge factual">factual</span></td>
+                <td>134ms</td>
+                <td>100%</td>
+                <td>87</td>
+                <td>✅</td>
+                <td class="response">The Transformer architecture was introduced in 2017 by Vaswani et al. in their paper "Attention is A...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>factual_hard</td>
+                <td><span class="badge factual">factual</span></td>
+                <td>273ms</td>
+                <td>100%</td>
+                <td>177</td>
+                <td>✅</td>
+                <td class="response">RLHF (Reinforcement Learning from Human Feedback) is a machine learning technique where AI models ar...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>summarization</td>
+                <td><span class="badge summarization">summarization</span></td>
+                <td>173ms</td>
+                <td>100%</td>
+                <td>181</td>
+                <td>✅</td>
+                <td class="response">The Internet of Things (IoT) is a network of physical devices with sensors, software, and connectivi...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>reasoning_easy</td>
+                <td><span class="badge reasoning">reasoning</span></td>
+                <td>149ms</td>
+                <td>100%</td>
+                <td>93</td>
+                <td>✅</td>
+                <td class="response">To find the speed, divide the distance by the time: 
+120 km / 2 hours = 60 km/h.</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>reasoning_hard</td>
+                <td><span class="badge reasoning">reasoning</span></td>
+                <td>192ms</td>
+                <td>100%</td>
+                <td>106</td>
+                <td>✅</td>
+                <td class="response">The farmer has 17 sheep initially. "All but 9 die" means that 9 sheep are left alive. 
+
+So, the numb...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>coding_easy</td>
+                <td><span class="badge coding">coding</span></td>
+                <td>565ms</td>
+                <td>67%</td>
+                <td>145</td>
+                <td>✅</td>
+                <td class="response">```python
+def reverse_string(s: str) -> str:
+    """
+    Reverses the input string.
+
+    Args:
+     ...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>coding_hard</td>
+                <td><span class="badge coding">coding</span></td>
+                <td>737ms</td>
+                <td>100%</td>
+                <td>273</td>
+                <td>✅</td>
+                <td class="response">```python
+def sieve_of_eratosthenes(n):
+    # Create a boolean array, prime, of size n+1
+    prime =...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>creative_easy</td>
+                <td><span class="badge creative">creative</span></td>
+                <td>141ms</td>
+                <td>100%</td>
+                <td>72</td>
+                <td>✅</td>
+                <td class="response">Metal mind awakes
+Learning, growing, thinking deep
+Future's gentle grasp</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>factual_easy</td>
+                <td><span class="badge factual">factual</span></td>
+                <td>135ms</td>
+                <td>100%</td>
+                <td>87</td>
+                <td>✅</td>
+                <td class="response">The transformer architecture was introduced in 2017 in the paper "Attention Is All You Need" by Vasw...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>factual_hard</td>
+                <td><span class="badge factual">factual</span></td>
+                <td>507ms</td>
+                <td>100%</td>
+                <td>167</td>
+                <td>✅</td>
+                <td class="response">RLHF (Reinforcement Learning from Human Feedback) is a training method that fine-tunes AI models usi...</td>
+            </tr>
+            <tr>
+                <td>llama</td>
+                <td>summarization</td>
+                <td><span class="badge summarization">summarization</span></td>
+                <td>521ms</td>
+                <td>100%</td>
+                <td>190</td>
+                <td>✅</td>
+                <td class="response">The Internet of Things (IoT) is a network of physical devices with sensors, software, and connectivi...</td>
+            </tr>
+            <tr>
+                <td>mixtral</td>
+                <td>reasoning_easy</td>
+                <td><span class="badge reasoning">reasoning</span></td>
+                <td>74ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>mixtral</td>
+                <td>reasoning_hard</td>
+                <td><span class="badge reasoning">reasoning</span></td>
+                <td>73ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>mixtral</td>
+                <td>coding_easy</td>
+                <td><span class="badge coding">coding</span></td>
+                <td>71ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>mixtral</td>
+                <td>coding_hard</td>
+                <td><span class="badge coding">coding</span></td>
+                <td>63ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>mixtral</td>
+                <td>creative_easy</td>
+                <td><span class="badge creative">creative</span></td>
+                <td>75ms</td>
+                <td>100%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>mixtral</td>
+                <td>factual_easy</td>
+                <td><span class="badge factual">factual</span></td>
+                <td>67ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>mixtral</td>
+                <td>factual_hard</td>
+                <td><span class="badge factual">factual</span></td>
+                <td>65ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>mixtral</td>
+                <td>summarization</td>
+                <td><span class="badge summarization">summarization</span></td>
+                <td>70ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>gemma2</td>
+                <td>reasoning_easy</td>
+                <td><span class="badge reasoning">reasoning</span></td>
+                <td>73ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>gemma2</td>
+                <td>reasoning_hard</td>
+                <td><span class="badge reasoning">reasoning</span></td>
+                <td>68ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>gemma2</td>
+                <td>coding_easy</td>
+                <td><span class="badge coding">coding</span></td>
+                <td>70ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>gemma2</td>
+                <td>coding_hard</td>
+                <td><span class="badge coding">coding</span></td>
+                <td>84ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>gemma2</td>
+                <td>creative_easy</td>
+                <td><span class="badge creative">creative</span></td>
+                <td>75ms</td>
+                <td>100%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>gemma2</td>
+                <td>factual_easy</td>
+                <td><span class="badge factual">factual</span></td>
+                <td>74ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>gemma2</td>
+                <td>factual_hard</td>
+                <td><span class="badge factual">factual</span></td>
+                <td>75ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr>
+            <tr>
+                <td>gemma2</td>
+                <td>summarization</td>
+                <td><span class="badge summarization">summarization</span></td>
+                <td>72ms</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>❌</td>
+                <td class="response"></td>
+            </tr></tbody>
+    </table>
+</body>
+</html>

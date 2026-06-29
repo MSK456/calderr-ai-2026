@@ -1,0 +1,47 @@
+{
+  "Prompt A \u2014 Basic": {
+    "summary": "Scientists at the University of Karachi have made a breakthrough in solar energy storage technology. Their new system, developed over 5 years, can store solar energy for up to 30 days using a novel chemical process involving salt compounds. This technology has the potential to reduce electricity costs by 40% in developing countries. The team plans to start pilot testing in rural Sindh by 2027 and has received $50 million in funding from international investors for commercialization.",
+    "metrics": {
+      "word_count": 77,
+      "has_key_facts": true,
+      "is_structured": false,
+      "conciseness": "Medium"
+    }
+  },
+  "Prompt B \u2014 Length Constrained": {
+    "summary": "Scientists at the University of Karachi have developed a breakthrough solar energy storage technology that can store energy for up to 30 days using a novel chemical process. The technology, which could reduce electricity costs by 40% in developing countries, is set to undergo pilot testing in rural Sindh by 2027 with $50 million in pledged international investment.",
+    "metrics": {
+      "word_count": 58,
+      "has_key_facts": true,
+      "is_structured": false,
+      "conciseness": "High"
+    }
+  },
+  "Prompt C \u2014 Structured Output": {
+    "summary": "HEADLINE: Breakthrough in Solar Energy Storage Technology Could Revolutionize Power Costs\n\nKEY FACTS:\n* Scientists at the University of Karachi developed a new solar energy storage system that can store energy for up to 30 days.\n* The system uses a novel chemical process involving salt compounds to achieve this feat.\n* The technology has the potential to reduce electricity costs by 40% in developing countries.\n\nIMPACT: This breakthrough in solar energy storage technology has the potential to significantly reduce electricity costs in developing countries, making it a crucial step towards achieving energy equity and sustainability.",
+    "metrics": {
+      "word_count": 96,
+      "has_key_facts": true,
+      "is_structured": true,
+      "conciseness": "Medium"
+    }
+  },
+  "Prompt D \u2014 Audience Specific": {
+    "summary": "**40% reduction in electricity costs for developing countries.**\n\nScientists at the University of Karachi have developed a solar energy storage system that can store energy for up to 30 days, using a novel chemical process. The technology is set for pilot testing in rural Sindh and has secured $50 million in international investment.",
+    "metrics": {
+      "word_count": 53,
+      "has_key_facts": true,
+      "is_structured": true,
+      "conciseness": "High"
+    }
+  },
+  "Prompt E \u2014 Chain-of-Thought": {
+    "summary": "**Identify: Who, What, When, Where, Why**\n\n- Who: Scientists at the University of Karachi, led by Dr. Ayesha Rahman\n- What: Breakthrough in solar energy storage technology\n- When: The technology was developed over 5 years, pilot testing to begin by 2027\n- Where: University of Karachi, Karachi, Pakistan, with pilot testing in rural Sindh\n- Why: To reduce electricity costs by 40% in developing countries\n\n**Most newsworthy element:** The pledge of $50 million from international investors for commercialization is likely the most newsworthy element as it indicates significant financial backing and potential for widespread adoption.\n\n**Crisp 3-sentence summary prioritizing newsworthiness:**\n\nScientists at the University of Karachi have made a breakthrough in solar energy storage technology, which can store energy for up to 30 days using a novel chemical process. The technology, developed over 5 years, has the potential to reduce electricity costs by 40% in developing countries. With $50 million pledged by international investors for commercialization, this innovation is poised to make a significant impact globally.",
+    "metrics": {
+      "word_count": 167,
+      "has_key_facts": true,
+      "is_structured": true,
+      "conciseness": "Low"
+    }
+  }
+}
