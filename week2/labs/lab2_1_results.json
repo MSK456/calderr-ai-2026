@@ -1,0 +1,124 @@
+[
+  {
+    "title": "Senior Python Developer",
+    "company": "TechCorp",
+    "salary": {
+      "min_amount": 400000,
+      "max_amount": 600000,
+      "currency": "PKR",
+      "period": "monthly"
+    },
+    "required_skills": [
+      "Python",
+      "Django",
+      "PostgreSQL",
+      "Docker",
+      "AWS"
+    ],
+    "nice_to_have_skills": [
+      "React",
+      "Redis",
+      "Kubernetes"
+    ],
+    "location": "Islamabad",
+    "is_remote": false,
+    "is_hybrid": true,
+    "experience_years": 5,
+    "job_type": "full-time",
+    "seniority": "senior"
+  },
+  {
+    "title": "ML Engineer Intern",
+    "company": "AI Startup",
+    "salary": null,
+    "required_skills": [
+      "Python",
+      "NumPy",
+      "ML concepts"
+    ],
+    "nice_to_have_skills": [
+      "PyTorch",
+      "scikit-learn"
+    ],
+    "location": null,
+    "is_remote": true,
+    "is_hybrid": false,
+    "experience_years": null,
+    "job_type": "internship",
+    "seniority": "junior"
+  },
+  {
+    "title": "Lead DevOps Engineer",
+    "company": "FinTech Ltd",
+    "salary": {
+      "min_amount": 80000,
+      "max_amount": 110000,
+      "currency": "GBP",
+      "period": "yearly"
+    },
+    "required_skills": [
+      "Kubernetes",
+      "Terraform",
+      "AWS/GCP",
+      "CI/CD",
+      "Linux"
+    ],
+    "nice_to_have_skills": [],
+    "location": "London",
+    "is_remote": false,
+    "is_hybrid": false,
+    "experience_years": 10,
+    "job_type": "full-time",
+    "seniority": "senior"
+  },
+  {
+    "title": "Junior Frontend Developer",
+    "company": null,
+    "salary": {
+      "min_amount": 150000,
+      "max_amount": 150000,
+      "currency": "PKR",
+      "period": "monthly"
+    },
+    "required_skills": [
+      "React",
+      "TypeScript",
+      "CSS",
+      "Git"
+    ],
+    "nice_to_have_skills": [],
+    "location": "Karachi",
+    "is_remote": false,
+    "is_hybrid": false,
+    "experience_years": 2,
+    "job_type": "full-time",
+    "seniority": "junior"
+  },
+  {
+    "title": "Data Scientist",
+    "company": null,
+    "salary": {
+      "min_amount": 50,
+      "max_amount": 70,
+      "currency": "USD",
+      "period": "hourly"
+    },
+    "required_skills": [
+      "Python",
+      "Pandas",
+      "ML",
+      "SQL",
+      "Power BI"
+    ],
+    "nice_to_have_skills": [
+      "Spark",
+      "Snowflake"
+    ],
+    "location": null,
+    "is_remote": true,
+    "is_hybrid": false,
+    "experience_years": null,
+    "job_type": "contract",
+    "seniority": "mid"
+  }
+]
