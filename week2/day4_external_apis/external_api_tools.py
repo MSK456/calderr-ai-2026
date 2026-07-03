@@ -202,9 +202,15 @@ def get_tech_news(topic: str = "technology") -> str:
 
 TOOLS = [get_weather, get_exchange_rate, get_tech_news]
 
-SYSTEM_PROMPT = "...same system message text..."
-agent_executor = create_react_agent(llm, TOOLS, prompt=SYSTEM_PROMPT)
+SYSTEM_PROMPT = """You are a real-time information assistant with 3 live tools:
+1. get_weather: Real current weather for major cities
+2. get_exchange_rate: Live currency exchange rates
+3. get_tech_news: Latest BBC news headlines
 
+Always call the appropriate tool. Never guess or make up live data.
+Provide clear, well-formatted answers after getting tool results."""
+
+agent_executor = create_react_agent(llm, TOOLS, prompt=SYSTEM_PROMPT)
 def ask_agent(question: str):
     console.print(f"\n[bold blue]❓ {question}[/bold blue]")
     try:
