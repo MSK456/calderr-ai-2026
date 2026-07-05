@@ -50,39 +50,42 @@ technology · business · science · world
 ---
 
 ## 🏗️ Architecture
-User Query
-↓
-Agent (llama-4-scout-17b via Groq)
-↓
-├── tool_get_weather          →  Open-Meteo API (free, no key)
-├── tool_get_exchange_rates   →  open.er-api.com (free, no key)
-├── tool_convert_currency     →  open.er-api.com (free, no key)
-├── tool_get_news             →  BBC RSS Feed (free, no key)
-└── tool_generate_briefing    →  Groq LLM synthesis
-↓
-Formatted Response to User
+
+    User Query
+        ↓
+    Agent (llama-4-scout-17b via Groq)
+        ↓
+        ├── tool_get_weather          →  Open-Meteo API (free, no key)
+        ├── tool_get_exchange_rates   →  open.er-api.com (free, no key)
+        ├── tool_convert_currency     →  open.er-api.com (free, no key)
+        ├── tool_get_news             →  BBC RSS Feed (free, no key)
+        └── tool_generate_briefing    →  Groq LLM synthesis
+                    ↓
+        Formatted Response to User
 
 ---
 
 ## 💬 Example Queries
-"Give me a complete morning briefing for Islamabad."
-"What is the weather in Dubai?"
-"Convert 1000 USD to Pakistani Rupees."
-"Latest technology news please."
-"Compare weather in London vs Karachi."
-"What is 500 EUR in AED?"
+
+- "Give me a complete morning briefing for Islamabad."
+- "What is the weather in Dubai?"
+- "Convert 1000 USD to Pakistani Rupees."
+- "Latest technology news please."
+- "Compare weather in London vs Karachi."
+- "What is 500 EUR in AED?"
 
 ---
 
 ## 📁 Project Structure
-api_aggregator/
-├── main.py           ← Agent + tools + interactive CLI
-├── tools/
-│   ├── init.py
-│   ├── weather.py    ← Open-Meteo API wrapper
-│   ├── currency.py   ← open.er-api.com wrapper
-│   └── news.py       ← BBC RSS parser
-└── README.md
+
+    api_aggregator/
+    ├── main.py           ← Agent + tools + interactive CLI
+    ├── tools/
+    │   ├── __init__.py
+    │   ├── weather.py    ← Open-Meteo API wrapper
+    │   ├── currency.py   ← open.er-api.com wrapper
+    │   └── news.py       ← BBC RSS parser
+    └── README.md
 
 ---
 
