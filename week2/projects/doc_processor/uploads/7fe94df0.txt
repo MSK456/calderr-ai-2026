@@ -1,0 +1,13 @@
+Project Sync — July 1, 2026
+Attendees: Ali Khan (PM), Sara Ahmed (Dev), Kamran Malik (Design)
+
+Key Decisions:
+- Launch MVP by July 15, 2026
+- Budget approved: PKR 500,000 for Q3
+
+Action Items:
+- Ali: Complete API documentation by July 8
+- Sara: Fix authentication bug — CRITICAL — due July 5
+- Kamran: Submit UI mockups by July 7
+
+Next meeting: July 8, 2026 at 10 AM.

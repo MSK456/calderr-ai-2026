@@ -1,0 +1,12 @@
+Senior AI Engineer — CalderR Technologies, Islamabad
+
+We are looking for a talented AI engineer to join our growing team.
+Requirements:
+- 4+ years Python experience
+- Strong knowledge of LangChain, LLMs, RAG systems
+- Experience with FastAPI, PostgreSQL, Docker
+- Nice to have: LangGraph, Pydantic v2, React
+
+Salary: PKR 350,000 - 550,000/month
+Hybrid work model (3 days office)
+Full-time position. Apply by July 20, 2026.
