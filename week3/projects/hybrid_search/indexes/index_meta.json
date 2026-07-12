@@ -1,0 +1,11 @@
+{
+  "num_articles": 30,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "categories": [
+    "science",
+    "education",
+    "ai",
+    "tech"
+  ],
+  "date_range": "2026-05-20 to 2026-06-26"
+}
