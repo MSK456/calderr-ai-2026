@@ -1,0 +1,44 @@
+[
+  {
+    "label": "MiniLM-256-k3-semantic",
+    "config_id": "config_1",
+    "embedding_model": "MiniLM-L6-v2",
+    "chunk_size": 256,
+    "k": 3,
+    "strategy": "semantic",
+    "faithfulness": 0.8,
+    "answer_relevancy": 0.3146556240702515,
+    "context_precision": 0.59999999994,
+    "avg_latency_ms": 408.896,
+    "total_chunks": 53,
+    "num_questions": 5
+  },
+  {
+    "label": "MiniLM-512-k3-semantic",
+    "config_id": "config_2",
+    "embedding_model": "MiniLM-L6-v2",
+    "chunk_size": 512,
+    "k": 3,
+    "strategy": "semantic",
+    "faithfulness": 0.8,
+    "answer_relevancy": 0.41687496008446845,
+    "context_precision": 0.6666666666000001,
+    "avg_latency_ms": 443.72,
+    "total_chunks": 28,
+    "num_questions": 5
+  },
+  {
+    "label": "MiniLM-1024-k3-semantic",
+    "config_id": "config_3",
+    "embedding_model": "MiniLM-L6-v2",
+    "chunk_size": 1024,
+    "k": 3,
+    "strategy": "semantic",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.5183167023918135,
+    "context_precision": 0.6666666666000001,
+    "avg_latency_ms": 175.512,
+    "total_chunks": 18,
+    "num_questions": 5
+  }
+]

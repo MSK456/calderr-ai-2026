@@ -58,35 +58,3 @@ benchmark_configs:
     strategy: "semantic"
     label: "MiniLM-1024-k3-semantic"
 
-  - id: "config_4"
-    embedding_model: "MiniLM-L6-v2"
-    chunk_size: 512
-    overlap: 50
-    k: 5
-    strategy: "semantic"
-    label: "MiniLM-512-k5-semantic"
-
-  - id: "config_5"
-    embedding_model: "MiniLM-L6-v2"
-    chunk_size: 512
-    overlap: 50
-    k: 3
-    strategy: "hybrid"
-    label: "MiniLM-512-k3-hybrid"
-
-  - id: "config_6"
-    embedding_model: "BGE-small-en"
-    chunk_size: 512
-    overlap: 50
-    k: 3
-    strategy: "semantic"
-    label: "BGE-512-k3-semantic"
-
-# Evaluation settings
-evaluation:
-  metrics:
-    - faithfulness
-    - answer_relevancy
-    - context_precision
-  llm_judge: "llama-3.3-70b-versatile"
-  embedding_judge: "all-MiniLM-L6-v2"

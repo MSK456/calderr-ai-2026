@@ -321,7 +321,7 @@ new Chart(document.getElementById('latency_chart'), {{
     labels: labels,
     datasets: [
       {{ label: 'Avg Latency (ms)', data: {latency_data}, backgroundColor: '#ff7b7288', borderColor: '#ff7b72', borderWidth: 2 }},
-      {{ label: 'Avg RAGAS Score (×1000ms)', data: {[round(s*1000) for s in avg_data]}, backgroundColor: '#d2a8ff88', borderColor: '#d2a8ff', borderWidth: 2 }},
+      {{ label: 'Avg RAGAS Score (×1000ms)', data: {[round(s*1000) if s == s else 0 for s in avg_data]}, backgroundColor: '#d2a8ff88', borderColor: '#d2a8ff', borderWidth: 2 }},
     ]
   }},
   options: {{
@@ -376,7 +376,7 @@ def run_benchmark():
 
         for cfg in benchmark_configs:
             progress.update(task, description=f"Building: {cfg['label']}")
-            label, results = run_single_config(cfg, documents, EVALUATION_QA_PAIRS)
+            label, results = run_single_config(cfg, documents, EVALUATION_QA_PAIRS[:5])
             all_pipeline_results[label] = results
             progress.advance(task)
 
@@ -389,8 +389,11 @@ def run_benchmark():
     all_scores: list[ConfigScore] = []
     cfg_lookup = {c["label"]: c for c in benchmark_configs}
 
-    for label, results in all_pipeline_results.items():
+    for i, (label, results) in enumerate(all_pipeline_results.items()):
         console.print(f"  [dim]Evaluating: {label}...[/dim]")
+        if i > 0:
+            console.print("[dim]Waiting 60s for rate limit reset...[/dim]")
+            import time; time.sleep(60)
         ragas_scores = evaluate_with_ragas(results)
         cfg = cfg_lookup[label]
 

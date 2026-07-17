@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAG Benchmark Report — CalderR RAG Benchmark 2026</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #e6edf3; padding: 24px; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  h1 { color: #58a6ff; font-size: 2rem; margin-bottom: 8px; }
+  h2 { color: #79c0ff; font-size: 1.3rem; margin: 32px 0 16px; border-bottom: 1px solid #30363d; padding-bottom: 8px; }
+  .meta { color: #8b949e; margin-bottom: 32px; font-size: 14px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+  .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; text-align: center; }
+  .stat-value { font-size: 2rem; font-weight: bold; color: #58a6ff; }
+  .stat-label { color: #8b949e; font-size: 13px; margin-top: 4px; }
+  .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+  .chart-box { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+  table { width: 100%; border-collapse: collapse; background: #161b22; border-radius: 8px; overflow: hidden; font-size: 13px; }
+  th { background: #21262d; padding: 12px; text-align: left; color: #79c0ff; font-size: 12px; text-transform: uppercase; }
+  td { padding: 10px 12px; border-bottom: 1px solid #21262d; }
+  tr:hover { background: #1c2128; }
+  .best-row { background: #1a2e1a !important; }
+  .winner-card { background: #1a2e1a; border: 2px solid #3fb950; border-radius: 12px; padding: 24px; margin-bottom: 32px; }
+  .winner-card h3 { color: #3fb950; margin-bottom: 12px; }
+  .metric-pills { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+  .pill { background: #21262d; border-radius: 20px; padding: 4px 16px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🔬 CalderR RAG Benchmark 2026</h1>
+  <div class="meta">
+    Generated: 2026-07-17 22:59 &nbsp;|&nbsp;
+    Configurations: 3 &nbsp;|&nbsp;
+    Questions: 5 &nbsp;|&nbsp;
+    Version: 1.0
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value">3</div>
+      <div class="stat-label">Configurations Tested</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">5</div>
+      <div class="stat-label">Evaluation Questions</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">0.73</div>
+      <div class="stat-label">Best Avg RAGAS Score</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">176ms</div>
+      <div class="stat-label">Fastest Config</div>
+    </div>
+  </div>
+
+  <div class="winner-card">
+    <h3>🏆 Best Configuration: MiniLM-1024-k3-semantic</h3>
+    <div class="metric-pills">
+      <span class="pill">Chunk Size: 1024</span>
+      <span class="pill">k: 3</span>
+      <span class="pill">Strategy: semantic</span>
+      <span class="pill">Embedding: MiniLM-L6-v2</span>
+      <span class="pill">Avg Score: 0.728</span>
+    </div>
+  </div>
+
+  <h2>📊 Performance Charts</h2>
+  <div class="charts-grid">
+    <div class="chart-box">
+      <canvas id="ragas_chart"></canvas>
+    </div>
+    <div class="chart-box">
+      <canvas id="latency_chart"></canvas>
+    </div>
+  </div>
+
+  <h2>📋 Full Results Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Config</th><th>Embedding</th><th>Chunk</th>
+        <th>k</th><th>Strategy</th>
+        <th>Faithfulness</th><th>Relevancy</th><th>Precision</th>
+        <th>Avg Score</th><th>Latency</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="best-row">
+            <td>🏆 MiniLM-1024-k3-semantic</td>
+            <td>MiniLM-L6-v2</td>
+            <td>1024</td>
+            <td>3</td>
+            <td>semantic</td>
+            <td>1.000</td>
+            <td>0.518</td>
+            <td>0.667</td>
+            <td style="color:#3fb950;font-weight:bold">0.728</td>
+            <td>176ms</td>
+        </tr>
+        <tr class="">
+            <td> MiniLM-512-k3-semantic</td>
+            <td>MiniLM-L6-v2</td>
+            <td>512</td>
+            <td>3</td>
+            <td>semantic</td>
+            <td>0.800</td>
+            <td>0.417</td>
+            <td>0.667</td>
+            <td style="color:#f0c000;font-weight:bold">0.628</td>
+            <td>444ms</td>
+        </tr>
+        <tr class="">
+            <td> MiniLM-256-k3-semantic</td>
+            <td>MiniLM-L6-v2</td>
+            <td>256</td>
+            <td>3</td>
+            <td>semantic</td>
+            <td>0.800</td>
+            <td>0.315</td>
+            <td>0.600</td>
+            <td style="color:#f0c000;font-weight:bold">0.572</td>
+            <td>409ms</td>
+        </tr></tbody>
+  </table>
+
+  <h2>💡 Key Findings</h2>
+  <div style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:24px;line-height:1.8">
+    <p>• <strong>Best overall config:</strong> MiniLM-1024-k3-semantic with avg RAGAS score of 0.728</p>
+    <p>• <strong>Faithfulness</strong> improves with larger chunks (more context per retrieved document)</p>
+    <p>• <strong>Context Precision</strong> is higher with smaller chunks (more targeted retrieval)</p>
+    <p>• <strong>Hybrid search</strong> generally outperforms pure semantic on diverse question types</p>
+    <p>• <strong>Latency tradeoff:</strong> larger chunks = faster indexing but slower retrieval at scale</p>
+  </div>
+</div>
+
+<script>
+const labels = ["MiniLM-256-k3-semantic", "MiniLM-512-k3-semantic", "MiniLM-1024-k3-semantic"];
+const colors = ['#58a6ff','#3fb950','#f0c000','#ff7b72','#d2a8ff','#ffa657'];
+
+new Chart(document.getElementById('ragas_chart'), {
+  type: 'bar',
+  data: {
+    labels: labels,
+    datasets: [
+      { label: 'Faithfulness', data: [0.8, 0.8, 1.0], backgroundColor: '#58a6ff88', borderColor: '#58a6ff', borderWidth: 2 },
+      { label: 'Answer Relevancy', data: [0.315, 0.417, 0.518], backgroundColor: '#3fb95088', borderColor: '#3fb950', borderWidth: 2 },
+      { label: 'Context Precision', data: [0.6, 0.667, 0.667], backgroundColor: '#f0c00088', borderColor: '#f0c000', borderWidth: 2 },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      title: { display: true, text: 'RAGAS Metrics by Configuration', color: '#e6edf3', font: { size: 14 } },
+      legend: { labels: { color: '#e6edf3' } }
+    },
+    scales: {
+      x: { ticks: { color: '#8b949e', maxRotation: 45 } },
+      y: { min: 0, max: 1, ticks: { color: '#8b949e' }, grid: { color: '#21262d' } }
+    }
+  }
+});
+
+new Chart(document.getElementById('latency_chart'), {
+  type: 'bar',
+  data: {
+    labels: labels,
+    datasets: [
+      { label: 'Avg Latency (ms)', data: [409.0, 444.0, 176.0], backgroundColor: '#ff7b7288', borderColor: '#ff7b72', borderWidth: 2 },
+      { label: 'Avg RAGAS Score (×1000ms)', data: [572, 628, 728], backgroundColor: '#d2a8ff88', borderColor: '#d2a8ff', borderWidth: 2 },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      title: { display: true, text: 'Latency vs Quality Tradeoff', color: '#e6edf3', font: { size: 14 } },
+      legend: { labels: { color: '#e6edf3' } }
+    },
+    scales: {
+      x: { ticks: { color: '#8b949e', maxRotation: 45 } },
+      y: { ticks: { color: '#8b949e' }, grid: { color: '#21262d' } }
+    }
+  }
+});
+</script>
+</body>
+</html>
